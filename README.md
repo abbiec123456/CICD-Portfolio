@@ -1,5 +1,4 @@
 # CICD-Portfolio
 # Project for my Pipeline for my DevOps Software Engineering class.
 # Set up webhook and jenkins
-# demo
-# demo2 
+# Running on EC2 Instance
