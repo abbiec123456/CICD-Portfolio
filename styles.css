@@ -1,88 +1,67 @@
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
+  background-color: #f5f7fa;
   color: #333;
-  background-color: #f4f6f8;
+  line-height: 1.6;
 }
 
+/* Layout */
 .container {
   width: 85%;
-  margin: auto;
-  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 2rem 0;
 }
 
+/* Header */
 header {
   background: linear-gradient(135deg, #007bff, #00b4d8);
-  color: white;
-  padding: 3rem 0;
+  color: #fff;
   text-align: center;
-  border-bottom: 5px solid #0096c7;
+  padding: 3rem 1rem;
+  border-bottom: 4px solid #0096c7;
 }
 
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-header p {
+header .subtitle {
   font-size: 1.1rem;
   opacity: 0.9;
+  margin-top: 0.5rem;
 }
 
-section {
-  background: white;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+/* Main Content */
+main h2 {
+  color: #0077b6;
+  font-size: 1.6rem;
+  border-left: 4px solid #00b4d8;
+  padding-left: 10px;
+  margin: 2rem 0 1rem;
 }
 
-section h2 {
-  color: #007bff;
+p, li {
+  font-size: 1rem;
+  color: #444;
   margin-bottom: 1rem;
 }
 
-.stages {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+ol, ul {
+  margin-left: 1.5rem;
 }
 
-.stage {
-  background: #f8f9fa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.stage:hover {
-  transform: translateY(-5px);
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background: #e9f2ff;
-  padding: 0.8rem 1rem;
-  border-left: 4px solid #007bff;
-  margin-bottom: 0.5rem;
-  border-radius: 5px;
-}
-
+/* Links */
 a {
-  color: #007bff;
+  color: #0077b6;
   text-decoration: none;
   font-weight: 500;
 }
@@ -91,10 +70,28 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
-  background: #222;
-  color: #ddd;
+  background: #001f3f;
+  color: #fff;
   text-align: center;
   padding: 1.5rem 0;
+  margin-top: 3rem;
   font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main h2 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    width: 90%;
+  }
 }

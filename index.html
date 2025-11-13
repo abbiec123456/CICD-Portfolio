@@ -1,48 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abbie Coombes | CI/CD Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Abbie Coombes</h1>
-      <p>CI/CD Pipeline Project using Jenkins and AWS EC2</p>
+      <p class="subtitle">CI/CD Pipeline Project using Jenkins and AWS EC2</p>
     </div>
   </header>
 
   <main class="container">
-    <section class="intro">
+    <section>
       <h2>Project Overview</h2>
       <p>
         This project demonstrates a fully automated CI/CD pipeline built using Jenkins, GitHub, and AWS EC2.
-        Each time code is pushed to the main branch, Jenkins automatically builds, tests, and deploys the
-        latest version of the application to an EC2 instance.
+        Each time code is pushed to the main branch, Jenkins automatically builds, tests, and deploys the latest version
+        of the application to an EC2 instance.
       </p>
     </section>
 
-    <section class="pipeline">
+    <section>
       <h2>Pipeline Workflow</h2>
-      <div class="stages">
-        <div class="stage">
-          <h3>1. GitHub Commit</h3>
-          <p>Changes are committed and pushed to GitHub, triggering a Jenkins build automatically via a webhook.</p>
-        </div>
-        <div class="stage">
-          <h3>2. Jenkins Build</h3>
-          <p>Jenkins pulls the latest code, runs automated steps defined in the Jenkinsfile, and prepares the deployment package.</p>
-        </div>
-        <div class="stage">
-          <h3>3. Deployment to EC2</h3>
-          <p>The latest build is deployed on the EC2 server, replacing the previous version and keeping the application up to date.</p>
-        </div>
-      </div>
+      <ol>
+        <li>
+          <strong>GitHub Commit:</strong> Changes are committed and pushed to GitHub, triggering a Jenkins build automatically via a webhook.
+        </li>
+        <li>
+          <strong>Jenkins Build:</strong> Jenkins pulls the latest code, runs automated steps defined in the Jenkinsfile, and prepares the deployment package.
+        </li>
+        <li>
+          <strong>Deployment to EC2:</strong> The latest build is deployed on the EC2 server, replacing the previous version and keeping the application up to date.
+        </li>
+      </ol>
     </section>
 
-    <section class="tech">
+    <section>
       <h2>Technologies Used</h2>
       <ul>
         <li>Jenkins for automation</li>
@@ -52,12 +49,9 @@
       </ul>
     </section>
 
-    <section class="contact">
+    <section>
       <h2>Contact</h2>
-      <p>
-        You can view the source code for this project on 
-        <a href="https://github.com/abbiec123456/CICD-Portfolio" target="_blank">GitHub</a>.
-      </p>
+      <p>You can view the source code for this project on <a href="https://github.com/">GitHub</a>.</p>
     </section>
   </main>
 
