@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <div class="container">
       <h1>Abbie Coombes</h1>
       <p class="subtitle">CI/CD Pipeline Project using Jenkins and AWS EC2</p>
@@ -15,7 +15,7 @@
   </header>
 
   <main class="container">
-    <section>
+    <section class="fade-in">
       <h2>Project Overview</h2>
       <p>
         This project demonstrates a fully automated CI/CD pipeline built using Jenkins, GitHub, and AWS EC2.
@@ -24,7 +24,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="fade-in">
       <h2>Pipeline Workflow</h2>
       <ol>
         <li>
@@ -39,7 +39,7 @@
       </ol>
     </section>
 
-    <section>
+    <section class="fade-in">
       <h2>Technologies Used</h2>
       <ul>
         <li>Jenkins for automation</li>
@@ -49,14 +49,36 @@
       </ul>
     </section>
 
-    <section>
+    <section class="fade-in">
       <h2>Contact</h2>
       <p>You can view the source code for this project on <a href="https://github.com/">GitHub</a>.</p>
     </section>
   </main>
 
-  <footer>
+  <footer class="fade-in">
     <p>© 2025 Abbie Coombes | CI/CD Portfolio</p>
   </footer>
+
+  <script>
+    // Fade-in animation when elements come into view
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -20px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
 </body>
 </html>
